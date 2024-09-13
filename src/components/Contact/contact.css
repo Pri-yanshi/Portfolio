@@ -1,0 +1,224 @@
+#contactPage{
+    height: 50%;
+    width: 100vw;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.contactTitle{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.clientDesc{
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.clientImg{
+    margin: 2rem 0;
+    display: flex;
+    background-color:  rgb(29, 28, 28);
+}
+.Imgs1{
+    object-fit: cover;
+    border-top: 0.5px solid rgb(37, 36, 36);
+    width:100px;
+    height: 100px;
+    min-width: 7rem;
+    margin: 0 0.8rem; 
+    box-shadow: 5px 5px 7px rgb(0,0,0,0.5);  
+}
+.Imgs2{  
+    object-fit: cover;
+    border-top: 0.5px solid rgb(39, 37, 37);
+    width:399px;
+    height: 100px;
+    min-width: 9rem;
+    margin: 0 0.8rem;
+    box-shadow: 5px 5px 7px rgb(0,0,0,0.5);  
+}
+.Imgs3{
+    object-fit: cover;
+    border-top:0.5px solid rgb(35, 34, 34);
+    width:477px;
+    height: 100px;
+    min-width: 9rem;
+    margin: 0 0.8rem;
+    box-shadow: 5px 5px 7px rgb(0,0,0,0.5);     
+}
+.Imgs4{
+    object-fit: cover;
+    border-top:0.5px solid rgb(35, 34, 34);
+    width:280px;
+    min-width: 9rem;
+    height: 100px;
+    margin: 0 0.8rem;
+    box-shadow: 5px 5px 7px  rgb(0,0,0,0.5);      
+}
+.clients{
+    padding: 2rem;
+}
+.contactDesc{
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.contactForm{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 60rem;
+    
+}
+.name, .email, .msg{
+    font-size: 1rem;
+    width: 100%;
+    max-width: 40rem;
+    outline: none;
+    border: none;
+    border-radius: 0.6rem;
+    box-shadow: 4px 4px 6px rgb(29, 28, 28);
+    margin: 0.5rem;
+    padding: 0.5rem 0.8rem ;
+    background-color: rgb(52, 52, 52);
+    color: white;
+}
+.contactForm .btn{
+    padding: 0.75rem 2.5rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+}
+.links{
+    display: flex;
+    flex-wrap: wrap; 
+
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    padding: 0.5rem ;
+    margin: 0.5rem 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px rgba(1, 1, 1, 0.718);
+    color: #fff; 
+    position: relative;
+    line-height: 48px;
+    overflow: hidden;
+    transition: transform 0.5s;
+
+}
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+.linkImg1{
+    font-size: 22px;
+    
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+.icon::after{
+    content:'';
+    width:100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ed1c94, #ffec17);
+    top: -90px;
+    left: 0;
+
+    transition: 0.5s;
+    position: absolute;
+
+}
+/* .icon:nth-child(1) ::after{
+    background: linear-gradient(-45deg, #ed1c94, #ffec17); am think about letter//
+} */
+.icon:hover::after{
+    top: 0;
+}
+.icon:hover .linkImg1{
+    color: #000;
+}
+.icon:hover{
+    transform: translateY(-10px);
+}
+
+
+
+
+
+@media screen and (699px < width < 880px){
+
+    .clients{
+        width: 100vw;
+       min-width: 60rem;
+    }
+    .clientImg{
+        flex-wrap: wrap;
+        margin: 1.8rem 0;
+    }
+    .Imgs1{
+        margin: 1rem 0 0 10rem;
+        width: 140px;
+        height: 140px;
+    }
+    .Imgs2{
+        margin: 1.5rem 0 0 3.5rem;
+        height: 127px;
+    }
+    .Imgs3{
+        margin: 1.5rem 0 0 4rem;
+        height: 96px;
+    }
+    .Imgs4{
+        margin: 1rem 0 0 1.9rem;
+        height: 102px;
+    }
+}
+
+
+@media screen and (340px < width < 430px){
+    #contactPage{
+        width: 90vw;
+    }
+    .clientImg{
+        flex-wrap: wrap;
+        margin: 1.8rem 0;
+    }
+    .clients{
+        width: 50vw;
+       min-width: 29rem;
+
+    }
+    .Imgs1{
+        margin: 1rem 0;
+        margin-left: 121px;
+    }
+    .Imgs2{
+        margin: 1.5rem 0;
+        height: 83px;
+    }
+    .Imgs3{
+        margin: 1.5rem 0;
+        height: 83px;
+    }
+    .Imgs4{
+        margin: 1rem 0 0 2.9rem;
+        height: 104px;
+    }
+}
+    
+
+
