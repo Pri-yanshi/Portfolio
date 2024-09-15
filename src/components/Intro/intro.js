@@ -25,7 +25,7 @@ const Intro = () => {
         
           /></span></span>
             <p className="introPara">I am a skilled web Developer with experience in creating visually <br />appealing and user friendly websites.</p>
-            <Link><button className="btn"><FaUserTie className='btnImg'/>Hire Me</button></Link>
+            <Link><button className="btn"  onClick={()=>{document.getElementById('contact').scrollIntoView({behavior:'smooth'});}}><FaUserTie className='btnImg'/>Hire Me</button></Link>
              <a href={Resume_new}><button className='btn'>Get Resume</button></a>
         </div>
         <img src={pri} alt="Profile" className='introImg'/>
