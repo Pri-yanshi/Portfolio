@@ -22,10 +22,10 @@ const Navbar = () => {
         <GiHamburgerMenu id='bar' onClick={()=>setShowMenu(!showMenu)}/>
         <div className="navMenu" style={{display: showMenu? 'flex':'none'}}>
         <Link activeClass='active' to='intro' spy={true}smooth={true} offset={-100} duration={500} className="ListItem">Home</Link>
-          <Link activeClass='active' to='skills' spy={true}smooth={true} offset={-120} duration={500}  className="ListItem">About </Link>
-          <Link activeClass='active' to='works' spy={true}smooth={true} offset={-100} duration={500}  className="ListItem">Portfolio</Link>
-          <Link activeClass='active' to='clients' spy={true}smooth={true} offset={-100} duration={500}  className="ListItem">Client</Link>
-          <Link activeClass='active' to='contact' spy={true}smooth={true} offset={-100} duration={500}  className="ListItem">Contact</Link>
+          <Link activeClass='active' to='skills' spy={true}smooth={true} offset={-200} duration={500}  className="ListItem">About </Link>
+          <Link activeClass='active' to='works' spy={true}smooth={true} offset={-200} duration={500}  className="ListItem">Portfolio</Link>
+          <Link activeClass='active' to='clients' spy={true}smooth={true} offset={-200} duration={500}  className="ListItem">Client</Link>
+          <Link activeClass='active' to='contact' spy={true}smooth={true} offset={-200} duration={500}  className="ListItem">Contact</Link>
         </div>
       </nav>
      </>

@@ -45,7 +45,7 @@
     border: 1px solid white;
     border-radius: 13px;
     cursor: pointer;
-    transition: 400ms;
+    transition: all 400ms;
 }
 .wImg:hover{
     filter:grayscale(1);

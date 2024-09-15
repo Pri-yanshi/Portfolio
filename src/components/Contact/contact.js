@@ -8,6 +8,25 @@ import {FaInstagram} from 'react-icons/fa6';
 import {FaFacebookF} from 'react-icons/fa6';
 import {SiSnapchat} from 'react-icons/si';
 import {PiWhatsappLogoBold} from 'react-icons/pi';
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, push } from 'firebase/database';
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDtPERDYhyoQgy_tslQKrclhtHn5yC7XeM",
+  authDomain: "learn1-firebase.firebaseapp.com",
+  databaseURL: "https://learn1-firebase-default-rtdb.firebaseio.com",
+  projectId: "learn1-firebase",
+  storageBucket: "learn1-firebase.appspot.com",
+  messagingSenderId: "1057729897103",
+  appId: "1:1057729897103:web:9b409bd92a58632b6c06fa",
+  measurementId: "G-3XC4P2HLBX"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+
 
 
 const Contact = () =>{
@@ -23,29 +42,33 @@ const Contact = () =>{
 
   const handleSubmit= async(e)=>{
     e.preventDefault();
-    const{name, email, message} = formValues;
-    const res = await fetch("https://learn1-firebase-default-rtdb.firebaseio.com//userDb.json",{
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json"},
-          body:JSON.stringify({
-            name, 
-            email, 
-            message
-          })
-        }
-        
-       );
-    setFormError(validate(formValues));
-    if(res){
-      setFormValues({
-        name:'',
-        email:'', 
-        message:''
-      })
-      alert('Data stored successfully');
+    const validationErrors = validate(formValues);
+    setFormError(validationErrors);
+    
+    if (Object.keys(validationErrors).length === 0) {
+      const { name, email, message } = formValues;
       
+      try {
+        // Use Firebase Realtime Database to store data
+        const dbRef = ref(database, 'userDb');
+        await push(dbRef, {
+          name,
+          email,
+          message
+        });
+        alert('Data stored successfully');
+        setFormValues({
+          name: '',
+          email: '',
+          message: ''
+        });
+      } catch (error) {
+        alert('Failed to store data');
+        console.error(error);
+      }
     }
+  
+    
   }
 
   const validate= (values)=>{
@@ -97,7 +120,7 @@ const Contact = () =>{
              <p style={{color:'brown',fontSize:'13px'}}>{formError.email}</p>
              <textarea name="message" cols="30" rows="5" className="msg" value={formValues.message} onChange={handleChange} placeholder='Your Message' autoComplete='off'></textarea>
              <p style={{color:'brown',fontSize:'13px'}}>{formError.message}</p>
-             <button type='submit' value='send' className="btn" >Submit</button>
+             <button type='submit'  className="btn" >Submit</button>
              <div className="links">
               <div className="icon"><a href='https://www.instagram.com/pri_yanshimaurya817/'><FaInstagram className='linkImg1'/></a></div>
               <div className="icon"><a href="https://www.facebook.com/"><FaFacebookF className='linkImg1'/></a></div>

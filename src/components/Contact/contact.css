@@ -30,7 +30,7 @@
     border-top: 0.5px solid rgb(37, 36, 36);
     width:100px;
     height: 100px;
-    min-width: 7rem;
+    min-width: 12rem;
     margin: 0 0.8rem; 
     box-shadow: 5px 5px 7px rgb(0,0,0,0.5);  
 }
@@ -39,7 +39,7 @@
     border-top: 0.5px solid rgb(39, 37, 37);
     width:399px;
     height: 100px;
-    min-width: 9rem;
+    min-width: 12rem;
     margin: 0 0.8rem;
     box-shadow: 5px 5px 7px rgb(0,0,0,0.5);  
 }
@@ -48,7 +48,7 @@
     border-top:0.5px solid rgb(35, 34, 34);
     width:477px;
     height: 100px;
-    min-width: 9rem;
+    min-width: 12rem;
     margin: 0 0.8rem;
     box-shadow: 5px 5px 7px rgb(0,0,0,0.5);     
 }
@@ -56,7 +56,7 @@
     object-fit: cover;
     border-top:0.5px solid rgb(35, 34, 34);
     width:280px;
-    min-width: 9rem;
+    min-width: 12rem;
     height: 100px;
     margin: 0 0.8rem;
     box-shadow: 5px 5px 7px  rgb(0,0,0,0.5);      
@@ -159,11 +159,12 @@ a{
 
 
 
-@media screen and (699px < width < 880px){
+@media screen and (340px < width < 480px){
 
     .clients{
+        flex-wrap: wrap;
         width: 100vw;
-       min-width: 60rem;
+       min-width: 15rem;
     }
     .clientImg{
         flex-wrap: wrap;
@@ -188,8 +189,34 @@ a{
     }
 }
 
+@media  screen and (650px < width < 840px) {
+    .clients{
+        flex-wrap: wrap;
+        width: 100vw;
+       min-width: 20rem;
+    }
+    .clientImg{
+        flex-wrap: wrap;
+    }
+    .Imgs1{
+        width: 140px;
+        height: 130px;
+    }
+    .Imgs2{
+      height: 127px;
+    }
+    .Imgs3{
+        margin: 1.5rem 0 0 4rem;
+        height: 96px;
+    }
+    .Imgs4{
+        margin: 1rem 0 0 1.9rem;
+        height: 102px; 
+    }
+}
 
-@media screen and (340px < width < 430px){
+
+@media screen and (340px < width < 480px){
     #contactPage{
         width: 90vw;
     }

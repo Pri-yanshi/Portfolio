@@ -60,15 +60,18 @@
 }
 
 .skillText p{
+   color:  rgb(37, 33, 33);
    text-align: center;
    padding: 10px 2px;
-   transform: translateY(-400px);
+   /* transform: translateY(-400px); */
    opacity: 0;
-   transition: 0.3s;
+   transition: all 0.3s;
+
   
 }
 
 .skillBar:hover > .skillText p{
+    color:  #fff;
     opacity: 1;
     transform: translateY(56px);
 }
@@ -98,7 +101,7 @@
         font-size: 2vw;
     }
 }
-@media  screen and (340px < width <499px) {
+@media  screen and (340px < width <485px) {
 
     .skillBars{
         flex-wrap: wrap;

@@ -100,8 +100,10 @@
         display: none;
     }
 }
-@media screen and(max-width:430px) {
+@media screen and(340px < width< 485px) {
+
     .navMenu{
+        /* top: 5rem; */
         right: 2rem;
         min-width: 12rem;
     }
