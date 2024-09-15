@@ -1,7 +1,7 @@
 import React from 'react';
 import './intro.css';
 import pri from '../../allImgs/pri.png';
-import Resume_new  from '../../allImgs/Resume_new.pdf';
+import Resume_new  from '../../allImgs/Priyanshi Maurya-CV.pdf';
 
 import { Typewriter } from 'react-simple-typewriter';
 import {Link} from 'react-scroll';
